@@ -1,0 +1,47 @@
+{
+  "name": "@potentia/mongodb",
+  "version": "6.0.0",
+  "description": "utilities for mongodb",
+  "main": "./index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dist": "tsc",
+    "fix": "npm run lint && npm run prettier",
+    "lint": "eslint --fix .",
+    "prettier": "prettier --write .",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+  },
+  "author": "Tz-Huan Huang <tzhuan@potentia.asia>",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node20": "^20.0.0",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jest": "^27.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "bignumber.js": "^9.0.0",
+    "mongodb": "^6.0.0"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./cache": "./cache.js",
+    "./collection": "./collection.js",
+    "./connection": "./connection.js",
+    "./error": "./error.js",
+    "./jest": "./jest.js",
+    "./type": "./type.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
